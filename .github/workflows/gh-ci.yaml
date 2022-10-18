@@ -38,7 +38,7 @@ jobs:
 
     - name: run tests
       run: |
-        python mda-xdrlib/tests/test_xdrlib.py
+        python mda_xdrlib/tests/test_xdrlib.py
 
     - name: test imports
       working-directory: ../
