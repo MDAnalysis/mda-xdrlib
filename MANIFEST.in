@@ -1,0 +1,4 @@
+include README.md LICENSE CHANGES
+include setup.py setup.cfg
+include versioneer.py
+include mda-xdrlib/_version.py
