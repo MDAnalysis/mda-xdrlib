@@ -2,6 +2,7 @@ import unittest
 
 from mda_xdrlib import xdrlib
 
+
 class XDRTest(unittest.TestCase):
 
     def test_xdr(self):
@@ -50,6 +51,7 @@ class XDRTest(unittest.TestCase):
         up.done()
         self.assertRaises(EOFError, up.unpack_uint)
 
+
 class ConversionErrorTest(unittest.TestCase):
 
     def setUp(self):
@@ -72,6 +74,7 @@ class ConversionErrorTest(unittest.TestCase):
 
     def test_uhyper(self):
         self.assertRaisesConversion(self.packer.pack_uhyper, 'string')
+
 
 if __name__ == "__main__":
     unittest.main()
