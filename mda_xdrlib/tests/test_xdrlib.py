@@ -1,6 +1,6 @@
 import unittest
 
-import xdrlib
+from mda_xdrlib import xdrlib
 
 class XDRTest(unittest.TestCase):
 
