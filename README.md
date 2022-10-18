@@ -1,4 +1,4 @@
-# mda-xdrlib
+# mda_xdrlib
 
 A stand-alone XDRLIB module extracted from cpython 3.10.8
 

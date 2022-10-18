@@ -43,4 +43,4 @@ jobs:
     - name: test imports
       working-directory: ../
       run: |
-        python -Ic "from mda-xdrlib import Unpacker"
+        python -Ic "from mda_xdrlib import xdrlib"
