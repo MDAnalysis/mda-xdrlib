@@ -43,6 +43,7 @@ jobs:
     - name: run tests
       run: |
         coverage run -m unittest discover
+        coverage xml
 
     - name: test imports
       working-directory: ../
@@ -51,5 +52,6 @@ jobs:
 
     - uses: codecov/codecov-action@v3
       with:
+        files: coverage.xml
         fail_ci_if_error: true
         verbose: true
