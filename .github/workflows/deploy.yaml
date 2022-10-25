@@ -22,8 +22,8 @@ defaults:
 jobs:
   build_wheels:
     environment: deploy
-    if: "github.repository == 'MDAnalysis/GridDataFormats'"
-    name: Build pure Python wheel
+    if: "github.repository == 'MDAnalysis/mda-xdrlib'"
+    name: Build pure Python wheel and tarball
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +34,7 @@ jobs:
       - name: setup_miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: 3.8
+          python-version: 3.9
           auto-update-conda: true
           add-pip-as-python-dependency: true
           architecture: x64
