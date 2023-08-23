@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mda_xdrlib"
+description = "Stand-alone XDRLIB module (from cpython 3.10.8)"
+authors = [{name = "The MDAnalysis development team", email = "mdanalysis@numfocus.org"}]
+maintainers = [{name = "The MDAnalysis development team", email = "mdanalysis@numfocus.org"}]
+requires-python = ">= 3.7"
+readme = "README.md"
+license = { file="LICENSE" }
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving",
+    "License :: OSI Approved :: Python Software Foundation License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/MDAnalysis/mda-xdrlib"
+
+[project.optional-dependencies]
+testing = ["pytest"]
+
+[tool.versioneer]
+VCS = "git"
+style = "pep440-post"
+versionfile_source = "mda_xdrlib/_version.py"
+versionfile_build = "mda_xdrlib/_version.py"
+tag_prefix = ""
+parentdir_prefix = "mda_xdrlib-"
