@@ -1,6 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.2"]
-build-backend = "setuptools.build_meta"
+requires = ['setuptools>=61.2', 'tomli; python_version < "3.11"', 'wheel']
 
 [project]
 name = "mda_xdrlib"
@@ -36,5 +35,5 @@ VCS = "git"
 style = "pep440-post"
 versionfile_source = "mda_xdrlib/_version.py"
 versionfile_build = "mda_xdrlib/_version.py"
-tag_prefix = ""
+tag_prefix = "v"
 parentdir_prefix = "mda_xdrlib-"

@@ -52,7 +52,7 @@ def get_config() -> VersioneerConfig:
     cfg.VCS = "git"
     cfg.style = "pep440-post"
     cfg.tag_prefix = ""
-    cfg.parentdir_prefix = "None"
+    cfg.parentdir_prefix = "mda_xdrlib-"
     cfg.versionfile_source = "mda_xdrlib/_version.py"
     cfg.verbose = False
     return cfg
