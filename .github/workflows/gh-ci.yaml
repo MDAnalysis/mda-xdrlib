@@ -54,6 +54,7 @@ jobs:
         python -Ic "from mda_xdrlib import xdrlib"
 
     - uses: codecov/codecov-action@v3
+      if: github.event_name != 'schedule'
       with:
         files: coverage.xml
         fail_ci_if_error: true
