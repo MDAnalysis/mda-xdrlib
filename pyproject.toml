@@ -1,5 +1,8 @@
 [build-system]
-requires = ['setuptools>=61.2', 'tomli; python_version < "3.11"', 'wheel']
+requires = [
+    'setuptools>=40.9.0',
+    'versioningit',
+]
 
 [project]
 name = "mda_xdrlib"
@@ -31,10 +34,19 @@ dynamic = ["version"]
 [project.optional-dependencies]
 testing = ["pytest"]
 
-[tool.versioneer]
-VCS = "git"
-style = "pep440-post"
-versionfile_source = "mda_xdrlib/_version.py"
-versionfile_build = "mda_xdrlib/_version.py"
-tag_prefix = "v"
-parentdir_prefix = "mda_xdrlib-"
+[tool.versioningit]
+default-version = "1+unknown"
+
+[tool.versioningit.vcs]
+method = "git"
+# the below line expects tags to look like '1.0.2'.
+# if prefixing with a v, e.g. 'v1.0.2', change it to ["v*"]
+match = ["v*"]
+
+[tool.versioningit.tag2version]
+rmprefix = "v"
+
+[tool.versioningit.format]
+distance = "{base_version}+{distance}.{vcs}{rev}"
+dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
