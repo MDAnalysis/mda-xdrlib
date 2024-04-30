@@ -1,8 +1,5 @@
 from . import xdrlib
-from . import _version
+from importlib.metadata import version
 
 
-__version__ = _version.get_versions()['version']
-
-from . import _version
-__version__ = _version.get_versions()['version']
+__version__ = version("mda_xdrlib")

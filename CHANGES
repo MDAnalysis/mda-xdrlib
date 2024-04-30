@@ -17,6 +17,11 @@ The rules for this file:
 
 ------------------------------------------------------------------------------
 
-* 1.0.0
+* 0.3.0
 
-  * Added various flake8 / pep8 fixes. 
+  * Switch fully to pyproject.toml setup
+  * Remove support for Python 3.7
+
+* 0.2.0
+
+  * Add Python 3.12 support
